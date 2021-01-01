@@ -47,12 +47,22 @@ function clear(arrString) {
     }
 }
 
+function invert(arrString) {
+    if (arrString === 'kicks') { 
+        for (i = 0; i < kicks.length; i++) {
+            kicks[i] = !kicks[i];
+        }
+    }
+}
+
 kicks = initDrumArray(kicks, drumCycleLength);
 snares = initDrumArray(snares, drumCycleLength);
 hiHats = initDrumArray(hiHats, drumCycleLength);
 rideCymbals = initDrumArray(rideCymbals, drumCycleLength);
 
-toggleDrum('snares', 0);
-console.log(snares);
-clear('snares');
-console.log(snares);
+toggleDrum('kicks', 7);
+console.log(kicks);
+invert('kicks');
+console.log(kicks);
+
+
