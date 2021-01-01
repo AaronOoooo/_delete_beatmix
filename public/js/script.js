@@ -52,6 +52,18 @@ function invert(arrString) {
         for (i = 0; i < kicks.length; i++) {
             kicks[i] = !kicks[i];
         }
+    } else if (arrString === 'snares') {
+        for (i = 0; i < snares.length; i++) {
+            snares[i] = !snares[i];
+        }
+    } else if (arrString === 'hiHats') {
+        for (i = 0; i < hiHats.length; i++) {
+            hiHats[i] = !hiHats[i];
+        }
+    } else if (arrString === 'rideCymbals') {
+        for (i = 0; i < rideCymbals.length; i++) {
+            rideCymbals[i] = !rideCymbals[i];
+        }
     }
 }
 
@@ -60,9 +72,7 @@ snares = initDrumArray(snares, drumCycleLength);
 hiHats = initDrumArray(hiHats, drumCycleLength);
 rideCymbals = initDrumArray(rideCymbals, drumCycleLength);
 
-toggleDrum('kicks', 7);
-console.log(kicks);
-invert('kicks');
-console.log(kicks);
-
-
+toggleDrum('rideCymbals', 7);
+console.log(rideCymbals);
+invert('rideCymbals');
+console.log(rideCymbals);
