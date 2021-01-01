@@ -39,8 +39,8 @@ function clear(arrString) {
     if (arrString === 'snares') {
         snares = snares.map(x => false);
     }
-    if (arrString === 'hitHats') {
-        hitHats = hitHats.map(x => false);
+    if (arrString === 'hiHats') {
+        hiHats = hiHats.map(x => false);
     }
     if (arrString === 'rideCymbals') {
         rideCymbals = rideCymbals.map(x => false);
