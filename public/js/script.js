@@ -3,6 +3,7 @@ let kicks = [];
 let snares = [];
 let hiHats = [];
 let rideCymbals = [];
+
 let drumCycleLength = 16;
 
 function initDrumArray(drumArray, drumLength) {
@@ -18,7 +19,7 @@ function toggleDrum(drum, index) {
             kicks[index] = !kicks[index];
             break;
         case 'snares':
-            console.log(snares);
+            snares[index] = !snares[index];
             break;
         case 'hiHats':
             hiHats[index] = !hiHats[index];
@@ -31,10 +32,27 @@ function toggleDrum(drum, index) {
     }
 }
 
+function clear(arrString) {
+    if (arrString === 'kicks') {
+        kicks = kicks.map(x => false);
+    }
+    if (arrString === 'snares') {
+        snares = snares.map(x => false);
+    }
+    if (arrString === 'hitHats') {
+        hitHats = hitHats.map(x => false);
+    }
+    if (arrString === 'rideCymbals') {
+        rideCymbals = rideCymbals.map(x => false);
+    }
+}
+
 kicks = initDrumArray(kicks, drumCycleLength);
 snares = initDrumArray(snares, drumCycleLength);
 hiHats = initDrumArray(hiHats, drumCycleLength);
 rideCymbals = initDrumArray(rideCymbals, drumCycleLength);
 
-toggleDrum('rideCymbals', 0);
-console.log(rideCymbals);
+toggleDrum('snares', 0);
+console.log(snares);
+clear('snares');
+console.log(snares);
