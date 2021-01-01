@@ -12,11 +12,29 @@ function initDrumArray(drumArray, drumLength) {
     return drumArray;    
 }
 
+function toggleDrum(drum, index) {
+    switch(drum) {
+        case 'kicks':
+            kicks[index] = !kicks[index];
+            break;
+        case 'snares':
+            console.log(snares);
+            break;
+        case 'hiHats':
+            hiHats[index] = !hiHats[index];
+            break;
+        case 'rideCymbals':
+            rideCymbals[index] = !rideCymbals[index];
+            break;
+        default:
+            console.log('No selection chosen');
+    }
+}
+
 kicks = initDrumArray(kicks, drumCycleLength);
-console.log(kicks);
 snares = initDrumArray(snares, drumCycleLength);
-console.log(kicks);
 hiHats = initDrumArray(hiHats, drumCycleLength);
-console.log(kicks);
 rideCymbals = initDrumArray(rideCymbals, drumCycleLength);
-console.log(kicks);
+
+toggleDrum('rideCymbals', 0);
+console.log(rideCymbals);
